@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css')}}">
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 login-section-wrapper">
+          <!-- Login form -->
+          <div class="login-wrapper my-auto">
+            <h1 class="login-title">Log in</h1>
+            <form action="signup" method="post" class="signin-form">
+              <!-- Username -->
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" required name="user">
+                <label class="form-control-placeholder" for="username">Username</label>
+              </div>
+              <!-- Name -->
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" required name="name">
+                <label class="form-control-placeholder" for="username">Name</label>
+              </div>
+              <!-- Mobile -->
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" required name="mobile">
+                <label class="form-control-placeholder" for="username">Mobile</label>
+              </div>
+              <!-- Email -->
+              <div class="form-group mt-3">
+                <input type="email" class="form-control" required name="email">
+                <label class="form-control-placeholder" for="username">Email</label>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" required name="address">
+                <label class="form-control-placeholder" for="username">address</label>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" required name="private">
+                <label class="form-control-placeholder" for="username">Private</label>
+              </div>
+              <!-- Password -->
+              <div class="form-group">
+                <input id="password-field" type="password" class="form-control" required  name="password">
+                <label class="form-control-placeholder" for="password">Password</label>
+                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+              </div>
+              <!-- Role dropdown -->
+              <div class="form-group mt-3">
+                <select class="form-control" name="role" required>
+                  <option value="">Select Role</option>
+                  <option value="manufacturer">Manufacturer</option>
+                  <option value="seller">Seller</option>
+                  <option value="Consumer">Consumer</option>
+                  
+                </select>
+              </div>
+              <!-- Submit button -->
+              <div class="form-group">
+                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+              </div>
+            </form>
+            <!-- Link to login -->
+            <p class="login-wrapper-footer-text">Already have an account? <a href="/" class="text-reset">login</a></p>
+          </div>
+        </div>
+        <!-- Image section -->
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="{{ url_for('static',filename='images/login.jpg')}}" alt="login image" class="login-img">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+  </body>
+</html>

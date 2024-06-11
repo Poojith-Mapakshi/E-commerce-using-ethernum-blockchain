@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  {% include "adminheader.html"%}
+  <body>
+    <div class="container">
+      <h1 class="my-4">Data</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            {% for k in column%}
+            <th>{{k}}</th>
+            {% endfor %}
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in data %}
+          <tr>
+            {% for k in user[0:-1] %}
+            <td>{{k}}</td>
+            {% endfor %}
+            <td>
+              {%if(user[-1]==None)%}
+              <a href="/approve?a={{user[0]}}&address={{user[7]}}&private={{user[8]}}">Approve</a>
+              {%else%} Approved {%endif%}
+            </td>
+            <td>
+              <a href="/deleteusers?a={{user[0]}}">delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fake Product Identification</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/web3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/truffle-contract.js') }}"></script>
+</head>
+
+<body>
+  <form action="/viewtransactions" method="get">
+    <div class="container">
+      <h2>Query Product</h2>
+
+      <div class="form-group">
+        <label for="email">Product Sn</label>
+        <input type="text" class="form-control" id="manufacturerCode" placeholder="Enter Product sn" name="productsn" />
+      </div>
+
+      <button type="submit" class="btn btn-warning btn-register" id="register">
+        Get Product
+      </button>
+    </div>
+  </form>
+  <h1>Or</h1>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="mb-4">Upload a File</h2>
+        <form action="/upload_qr" method="POST" enctype="multipart/form-data">
+          <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="fileInput" name="file" accept=".png,.jpg,.jpeg">
+            <label class="custom-file-label" for="fileInput">Choose file...</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/sellerDataApp.js"></script>
+</body>
+
+</html>
